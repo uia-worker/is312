@@ -1,0 +1,198 @@
+body {
+  background-color: #201E20; 
+  color: #999999;  /* fargeblindhet -> A99C95 uten simulering -> 908588*/
+  font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+      }
+table {
+  border-collapse: collapse;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+.reflist li {
+  list-style-type: none;
+  padding-bottom: 1.2em;
+}
+
+.plantable td, .plantable th {
+  border: 2px solid #8686B9;
+  padding: 10px 10px; 
+}
+.maincolumn {
+  width: 38em;
+  margin-right: -40em;
+  margin-left: 15em;
+  line-height: 1.6em;
+}
+pre {
+  background-color: #cfd1a7;
+  overflow: auto;
+  font-family: 'Monaco', monospace;
+  padding: 0 1em;
+  font-size: 0.9em;
+}
+code {
+  font-family: Monaco, monospace;
+  line-height: 100%;
+  color: #636262;
+  padding: 0.2em;
+  letter-spacing: -0.05em;
+  word-break: normal;
+  border-radius: 5px;
+}
+.refelem, .refcolumn, .refcontent {
+  background-color: #002F5D;
+  color: #C57500; 
+  border-color: black;
+  font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+}
+.refpara, .refelem {
+  position: relative;
+  float: right;
+  left: 2em;
+  height: 0em;
+  width: 13em;
+  margin: 0em -13em 0em 0em;
+}
+.refcolumn {
+  background-color: #002F5D; /* allerede spesifisert? */
+  display: block;
+  position: relative;
+  width: 13em;
+  font-size: 85%;
+  border: 0.5em solid #002F5D;
+  margin: 0 0 0 0;
+  white-space: normal;
+}
+.refcontent {
+  margin: 0 0 0 0;
+}
+
+/* Innholdsfortegnelse på venstre side av hovedkolonnen */
+.tocset {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  float: left;
+  width: 12.5em;
+  margin-right: 2em;
+}
+.tocview, .tocsub {
+  background-color: #DDC3A5; /*#E0A96D;*/ 
+}
+.tocviewlisttopspace {
+  margin-bottom: 1em;
+}
+.tocviewlist, .tocsublist {
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+.tocviewlist table {
+  font-size: 82%;
+}
+.tocviewlink {
+  text-decoration: none;
+}
+
+.tocset a:link {
+  color: #1E2965;
+  /*color: #201E20; */
+  /* blue */
+  /*color: #9B774D;*/
+}
+.tocset a:visited {
+  color: #376F4F;
+}
+.tocsubtitle {
+  font-size: 82%;
+  font-style: italic;
+  margin: 0.2em;
+  color: #201E20;
+}
+.tocsublinknumber {
+  font-size: 82%;
+}
+.tocsubseclink {
+  font-size: 82%;
+  text-decoration: none;
+}
+.tocviewtitle * {
+  font-weight: bold;
+  /*color: #9B774D;*/
+  color: #935B1D;
+}
+.tocviewsublist, .tocviewsublistonly, .tocviewsublisttop, .tocviewsublistbottom {
+  margin-left: 0.4em;
+  border-left: 1px solid #bbf;
+  padding-left: 0.8em;
+}
+.tocviewsublist table, .tocviewsublistonly table, .tocviewsublisttop table, .tocviewsublistbottom table {
+  font-size: 75%;
+}
+.tocviewtoggle {
+  font-size: 75%;
+  text-decoration: none;
+}
+.tocviewtoggle a {
+  color: #201E20;
+}
+.tocviewselflink {
+  text-decoration: underline;
+}
+.tocviewlisttopspace {
+  margin-bottom: 1em;
+}
+.versionbox {
+  position: relative;
+  float: right;
+  left: 2em;
+  height: 0em;
+  width: 13em;
+  margin: 0em -13em 0em 0em;
+}
+.version {
+  font-size: small;
+}
+blockquote {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 1em;
+}
+/*
+a {
+}
+
+a:link {
+  color: #9B774D;
+}
+
+a:visited {
+  color: #376F4F;
+}
+
+
+a:focus {
+}
+
+a:hover {
+}
+
+a:active {
+}
+*/
+
+/* print styles */
+@media print {
+
+  .tocset {
+    display: none;
+  }
+  .maincolumn {
+    width: 35em;
+    margin-right: -40em;
+    margin-left: 5em;
+    line-height: 1.6em;
+  }
+
+}
