@@ -2,7 +2,7 @@
 <html lang="no-NB">
 <head>
     <meta charset="utf-8">
-    <title>IS-312 Consensus</title>
+    <title>IS-312 Consensus Q</title>
     <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="styles/is312-style.css" title="default">
     <script type="text/javascript" src="js/is312.js"></script>
@@ -88,15 +88,41 @@
     </div>
   </div>
   <div class="maincolumn">
-    <h1>About IS-312</h1>
-    
+    <h1>Consensus?</h1>
+    <p>How can I help you? It is a process. </p>
 
     <h2>
       Basic concepts
       <a name="concepts"></a>
     </h2>
+    <p>Why is consensus a central concept related to the concept of blockchain?</p>
+    <p>Why is cryptocurrency the most cited blockchain application? Why is cryptography essential for cryptocurrency? Is cryptography necessary for implementation of blockchain? Who is Satoshi Nakomoto?</p>
+    <p>In an attempt to understand the cryptocurrency it is important to understand the concepts of currency and money from a broader perspective.</p>
+    <p>Necessity for some mechanisms of setting value on transactions of intangible assets may have led to proposals like "Hashcash". Vikram Dhillon (2021) describes it: <cite>Hashcash was devised by Adam Black in the late nineties to limit email spam with the first of its kind proof-of-work (PoW) algorithm. The rationale behind Hashcash was to attach some computational cost to sending emails. Spammers have a business model that relies on sending large numbers of emails with very little cost associated with each message. However, if there is even a small cost for each spam email sent, that cost multiplies over thousands of emails, and their business becomes unprofitable. Hashcash relies on the idea of cryptographic hash functions—a type of hash function (in the case of Bitcoin, it’s SHA1) that takes an input and converts it into a string and generates a message digest, ...</cite> And the same place: <cite>The hash functions are designed to have a property called one-way functions, which implies that a potential input can be verified very easily through the hash function to match the digest, but reproducing the input from the digest is infeasible. The only possible method of recreating the input is by using brute force to find the appropriate string of input. In practice, this is the computationally intensive element of Hashcash and has been imported into Bitcoin. This principle has become the foundation behind the proof-of-work (PoW) algorithms powering Bitcoin today, and most cryptocurrencies. The PoW for Bitcoin is more complex and involves new components ...</cite></p>
+    <p>From chap.openai.com (2023-08-20) with promt "Who is Satoshi Nakomoto?": <cite>"Satoshi Nakamoto is the pseudonymous individual or group of individuals responsible for creating Bitcoin, the first and most well-known cryptocurrency. The true identity of Satoshi Nakamoto remains unknown, and it is unclear whether the name represents a single person or a group of people. Satoshi Nakamoto's whitepaper, titled "Bitcoin: A Peer-to-Peer Electronic Cash System," was published in 2008, outlining the concept and principles of the cryptocurrency.<br />
+    The identity of Satoshi Nakamoto has been a subject of much speculation and curiosity within the cryptocurrency community and beyond. While several individuals have been suggested as potential candidates, none have been definitively proven to be the true creator(s) of Bitcoin. Satoshi Nakamoto's decision to remain anonymous has added to the intrigue surrounding the origins of Bitcoin.<br />
+    The development of Bitcoin by Satoshi Nakamoto led to the creation of a decentralized digital currency and the underlying blockchain technology. Bitcoin has since gained significant popularity, sparked the development of thousands of other cryptocurrencies, and initiated discussions about the future of finance, economics, and technology."</cite></p>
 
-    <p></p>
+    <p>Why is a ledger a model for the blockchain? Why is time-stamp important? </p>
+    <p>Time-stamping digital documents, transaction records, action records ... (a) find a way to time-stamp the data itself, without any reliance on the characteristics of the medium on which the data appears, so that it is impossible to change even one bit of the document without the change being apparent, (b) it should be impossible to stamp a document with a time and data different from the actual one</p>
+    <p>Model: N clients, each client has an [unique] identification number CID (clients can be be individuals, companies or divisions within a company); P signifies procedures or processes implemented on physical computing devices; DOC is used to name scoped collection of abstract symbols representing (some genre) text/code, image, sound etc.</p>
+    <p>Method: (1) discover procedure P1 to time-stamp a document DOC1 immediately when a client with CID1 desires, (2) discover procedure P2 for the client with CID1 to verify that P1 has been correctly performed, (3) discover procedure P3 for meeting a third party's (might be included in the set of clients and with a CID2) challenge to the validity.</p>
+    <p>Haber & Stornetta (1991) suggest a "digital safety-deposit box" as a naive solution. The basic principles might be:
+    <ul> 
+      <li>CID1 has a DOC1 to be time-stamped</li>
+      <li>CID1 transmits the DOC1 to the time-stamping service (TSS)</li>
+      <li>TSS records the time and date (timestamp TS) the DOC1 was received</li>
+      <li>TSS retains a copy of the DOC1 for safe-keeping</li>
+      <li>If the integrity of the DOC1 is ever challenged, then it (another instance of the DOC1, - DOC1C, probably tampered with) can be compared with the copy, DOC1, stored by the TSS (here we might discuss if DOC1 might be the copy still staying in the possesion of CID1 and DOC1C might be the copy of the DOC1, now in possesion of TSS???)</li>
+    </ul>   
+    If DOC1 and DOC1C are identical, then it is an evidence that the document has not been tampered with. 
+    </p>
+    <p>What concerns does this kind of approach raises?</p>
+    <ul> 
+      <li>PRIVACY. "Eve" could eavesdropp while DOC1 is being tranfered (here we have to make an assumption that we are using Internet architecture to transfer data from one physical node to another). TSS may also be compromised in different ways and it means that CID1 has to worry about the DOC1 </li>
+    </ul>
+
+    <p>Why is a consensus needed in blockchain systems? Is the consensus an algorithm or a social process, or both (or someting else?)? Is value transfer possible without consensus?</p>
     <p>(A Survey of Blockchain Consensus Protocols | ACM Computing Surveys, 2023)</p>
     
 
@@ -106,7 +132,7 @@
 <table class="plantable">
 <thead>
   <tr>
-    <th colspan="2" style="background-color: #474747; color: #cccccc;">Consensus</th>
+    <th colspan="3" style="background-color: #474747; color: #cccccc;">Consensus</th>
   </tr>
   <tr>
     <th>&nbsp;</th>
@@ -132,7 +158,13 @@
   
 </table>
 
-  
+<h2>
+  Definitions
+  <a name="definitions"></a>
+</h2>
+  <ul> 
+<li>A thing which appears, or which is perceived or observed; a particular (kind of) fact, occurrence, or change as perceived through the senses or known intellectually; esp. a fact or occurrence, the cause or explanation of which is in question.</li>
+  </ul>
 
   <h2>
       References
@@ -150,6 +182,12 @@
         <li>Bruin, de, Herzog, L., O’Neill, M., & Sandberg, J. (2018). Philosophy of Money and Finance (Stanford Encyclopedia of Philosophy). Stanford.edu. https://plato.stanford.edu/entries/money-finance/ (Bruin et al., 2018)</li>
 
         <li>A Survey of Blockchain Consensus Protocols | ACM Computing Surveys. (2023). ACM Computing Surveys. https://dl.acm.org/doi/full/10.1145/3579845?casa_token=wmxMygdw1y0AAAAA%3Am4OpA-ZnlzleL03WX3k-d_KvhrXv5yEOb8X_RK8Rk_CYuO0kvTCrJW9tTI6_Nzwwnd3GMHA5XRFn (A Survey of Blockchain Consensus Protocols | ACM Computing Surveys, 2023)</li>
+
+        <li>Haber, S., & Stornetta, W. Scott. (1991). How to time-stamp a digital document. Journal of Cryptology, 3(2). https://doi.org/10.1007/bf00196791 (Haber & Stornetta, 1991)</li>
+
+       <li>Vikram Dhillon. (2021). Blockchain Enabled Applications : Understand the Blockchain Ecosystem and How to Make It Work for You. Apress L. P. (Vikram Dhillon, 2021)</li>
+
+       <li>phenomenon, n. meanings, etymology and more | Oxford English Dictionary. (2023). Oed.com. https://doi.org/10.1093//OED//8736870835 (“Phenomenon, N. Meanings, Etymology and More | Oxford English Dictionary,” 2023)</li>
 
     </ul>
     
