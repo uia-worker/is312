@@ -95,15 +95,19 @@
       Basic concepts
       <a name="concepts"></a>
     </h2>
-    <p>Why is consensus a central concept related to the concept of blockchain?</p>
+    <p>Why is consensus necessery in blockchain applications?</p>
     <p>Why is cryptocurrency the most cited blockchain application? Why is cryptography essential for cryptocurrency? Is cryptography necessary for implementation of blockchain? Who is Satoshi Nakomoto?</p>
     <p>In an attempt to understand the cryptocurrency it is important to understand the concepts of currency and money from a broader perspective.</p>
+
+    <h2>Hashcash</h2>
     <p>Necessity for some mechanisms of setting value on transactions of intangible assets may have led to proposals like "Hashcash". Vikram Dhillon (2021) describes it: <cite>Hashcash was devised by Adam Black in the late nineties to limit email spam with the first of its kind proof-of-work (PoW) algorithm. The rationale behind Hashcash was to attach some computational cost to sending emails. Spammers have a business model that relies on sending large numbers of emails with very little cost associated with each message. However, if there is even a small cost for each spam email sent, that cost multiplies over thousands of emails, and their business becomes unprofitable. Hashcash relies on the idea of cryptographic hash functions—a type of hash function (in the case of Bitcoin, it’s SHA1) that takes an input and converts it into a string and generates a message digest, ...</cite> And the same place: <cite>The hash functions are designed to have a property called one-way functions, which implies that a potential input can be verified very easily through the hash function to match the digest, but reproducing the input from the digest is infeasible. The only possible method of recreating the input is by using brute force to find the appropriate string of input. In practice, this is the computationally intensive element of Hashcash and has been imported into Bitcoin. This principle has become the foundation behind the proof-of-work (PoW) algorithms powering Bitcoin today, and most cryptocurrencies. The PoW for Bitcoin is more complex and involves new components ...</cite></p>
     <p>From chap.openai.com (2023-08-20) with promt "Who is Satoshi Nakomoto?": <cite>"Satoshi Nakamoto is the pseudonymous individual or group of individuals responsible for creating Bitcoin, the first and most well-known cryptocurrency. The true identity of Satoshi Nakamoto remains unknown, and it is unclear whether the name represents a single person or a group of people. Satoshi Nakamoto's whitepaper, titled "Bitcoin: A Peer-to-Peer Electronic Cash System," was published in 2008, outlining the concept and principles of the cryptocurrency.<br />
     The identity of Satoshi Nakamoto has been a subject of much speculation and curiosity within the cryptocurrency community and beyond. While several individuals have been suggested as potential candidates, none have been definitively proven to be the true creator(s) of Bitcoin. Satoshi Nakamoto's decision to remain anonymous has added to the intrigue surrounding the origins of Bitcoin.<br />
     The development of Bitcoin by Satoshi Nakamoto led to the creation of a decentralized digital currency and the underlying blockchain technology. Bitcoin has since gained significant popularity, sparked the development of thousands of other cryptocurrencies, and initiated discussions about the future of finance, economics, and technology."</cite></p>
 
     <p>Why is a ledger a model for the blockchain? Why is time-stamp important? </p>
+
+    <h2>Time-stamping</h2>
     <p>Time-stamping digital documents, transaction records, action records ... (a) find a way to time-stamp the data itself, without any reliance on the characteristics of the medium on which the data appears, so that it is impossible to change even one bit of the document without the change being apparent, (b) it should be impossible to stamp a document with a time and data different from the actual one</p>
     <p>Model: N clients, each client has an [unique] identification number CID (clients can be be individuals, companies or divisions within a company); P signifies procedures or processes implemented on physical computing devices; DOC is used to name scoped collection of abstract symbols representing (some genre) text/code, image, sound etc.</p>
     <p>Method: (1) discover procedure P1 to time-stamp a document DOC1 immediately when a client with CID1 desires, (2) discover procedure P2 for the client with CID1 to verify that P1 has been correctly performed, (3) discover procedure P3 for meeting a third party's (might be included in the set of clients and with a CID2) challenge to the validity.</p>
@@ -123,7 +127,83 @@
     </ul>
 
     <p>Why is a consensus needed in blockchain systems? Is the consensus an algorithm or a social process, or both (or someting else?)? Is value transfer possible without consensus?</p>
+
+    <p>Consensus mechanisms are based on <i>classic distributed consensus algorithms</i>. Assume that <b>blockchain</b> is defined as <cite>a distributed ledger composed of a series of blocks built on a peer-to-peer (P2P) network</cite> (Xu et al., 2023). Then the blockchain consensus protocol (rules) enables participating nodes to append blocks to the blockchain in the same and unique order. Assuming that nodes in the P2P network can not be trusted (may engage in arbitrary malicious behaviour) a simple <b>crash fault tolerance</b> can not be applied to blockchains. <b>Byzantine Fault Tolerance</b> is required and a main objective becomes to implement a system for transactions of data in a network where nobody can be trusted (Wasn't banks invented for the same reason?). In addition, there is also an intenstion to remove trusted (?) third parties (as banks, for example). The environment is also <b>permissionless</b>, i.e. enrollment is open for all nodes.</p>
+    <table class="plantable">
+<thead>
+  <tr>
+    <th colspan="3" style="background-color: #474747; color: #cccccc;">Consensus</th>
+  </tr>
+  <tr>
+    <th>&nbsp;</th>
+    <th>Consensus algorithms</th>
+    <th>Type</th> 
+  </tr>
+</thead> 
+<tbody>
+  <tr>
+    <td>Theory</td>
+    <td>Crash Fault Tolerance, Byzantine Fault Tolerance, Nakamoto Consensus Protocol (PoW algorithm; randomly (nodes are competing in solving cryptographical puzzles) assign the right of new block generation to participating nodes)</td>
+    <td>Reflection</td>
+    </td>
+  </tr>
+  <tr>
+    <td>Models</td>
+    <td>Subsystem of human society: Membership, environment, structure. Structure: transactions (attributes: specifies senders, receivers, the amount of transaction, signature of the senders); blocks (parts: the block header (attributes: hash value of the previous block, version, random number, timestamp, target difficulty, and the root of the Merkle tree ...), the block body (set of transactions); blockchain as a sequence of blocks (hash of the previous block as a pointer pointing to the previous block, which forms a chain, and the new block is always appended to the blockchain). Membership: permissionless (need for incentives like mining rewards) and permissioned (only authorized nodes can append/read transactions according to permission policy; no need for incentives). Environment: synchronous network (a message is guaranteed to bee delivered within a known and fixed upper bound; can proceed in rounds; guaranteed that all nodes have received the message before starting new round; card games; difficult to implement because Internett is unreliable); partially synchrounous network (delivery guaranteed, but upper bound is unknown), asynchrounous network (only guaranteed to arrive eventually; most practical network model without timing assumptions). Which type of system, if a system at all? Kinship, culture, polity or economy? Protocols can be compared to the legal system? Ask philosopher (Mario Bunge): A legal system is a part of a human community set off by certain peculiar social relations of the man-transforming relations (like education, organizing and coercing), such as those of judging and passing sentence. The Law is a collection of all legal systems (<b>lex cryptographica as a part of the Law? <cite>"Lex cryptographia is a law that is now longer legitimized by a culturally symbolic referent which it no longer needs to be as there is no longer a need for recognition of belief: by programming code, the parties to a smart contract are making law, implying - or rather coding - the values they take to be fundamental, and initiating the law's automatic execution: legal basis, law writing, law and its enforcement fall into one."</cite> (Becker, 2022)).</b></td>
+    <td>Reflection</td>
+    </td>
+  </tr>
+  <tr>
+    <td>Challenges</td>
+    <td>Slow throughput, transaction confirmation latency, massive energy consumption, different security issues</td>
+    <td>Reflection</td>
+    </td>
+  </tr>
+</tbody>
+  
+</table>
+
+<p><b>CP</b> - Consensus Protocol</p>
+   <table class="plantable">
+<thead>
+  <tr>
+    <th colspan="3" style="background-color: #474747; color: #cccccc;">Categories of CP</th>
+  </tr>
+  <tr>
+    <th>&nbsp;</th>
+    <th>Proof-based</th>
+    <th>Committee-based</th> 
+    <th>Miscellaneous</th>
+  </tr>
+</thead> 
+<tbody>
+  <tr>
+    <td>Description</td>
+    <td>PoW, PoS, PoStorage ... give the nodes (participants) with high computing power, stakes, and storage, respectively, a higher priority in winning the competition</td>
+    <td>Classic consensus algorithms in distributed systems (Practical Byzantine Fault Tolerance, PBFT) allow the nodes (participants) to reach consensus by voting. Generally, the number of participants has to be known in advance, and that is easier to deploy in permissioned environment where enrollement is controlled.</td>
+    <td>Hybrid approach, - both proof-based and committee-based. Resource constraints, non-anonymous proof-based protocols, data redaction ... </td>
+    </td>
+  </tr>
+  <tr>
+    <td>Performance</td>
+    <td>Reflection</td>
+    <td>Reflection</td>
+    <td>Reflection</td>
+    </td>
+  </tr>
+  <tr>
+    <td>Questions</td>
+    <td>Reflection</td>
+    <td>Reflection</td>
+    <td>Reflection</td>
+    </td>
+  </tr>
+</tbody>
+  
+</table>
+    
     <p>(A Survey of Blockchain Consensus Protocols | ACM Computing Surveys, 2023)</p>
+    <p>(Consensus Mechanisms | Ethereum.org, 2023)</p>
     
 
     
@@ -163,7 +243,72 @@
   <a name="definitions"></a>
 </h2>
   <ul> 
-<li>A thing which appears, or which is perceived or observed; a particular (kind of) fact, occurrence, or change as perceived through the senses or known intellectually; esp. a fact or occurrence, the cause or explanation of which is in question.</li>
+<li><b>phenomenon</b> - a thing which appears, or which is perceived or observed; a particular (kind of) fact, occurrence, or change as perceived through the senses or known intellectually; esp. a fact or occurrence, the cause or explanation of which is in question.</li>
+<li><b>hashcash</b> - "Hashcash was devised by Adam Black in the late nineties to limit email spam with the first of its kind proof-of-work (PoW) algorithm. The rationale behind Hashcash was to attach some computational cost to sending emails. Spammers have a business model that relies on sending large numbers of emails with very little cost associated with each message. However, if there is even a small cost for each spam email sent, that cost multiplies over thousands of emails, and their business becomes unprofitable. Hashcash relies on the idea of cryptographic hash functions—a type of hash function (in the case of Bitcoin, it’s SHA1) that takes an input and converts it into a string and generates a message digest, ... The hash functions are
+designed to have a property called one-way functions, which implies that a
+potential input can be verified very easily through the hash function to match
+the digest, but reproducing the input from the digest is infeasible. The only
+possible method of recreating the input is by using brute force to find the
+appropriate string of input. In practice, this is the computationally intensive
+element of Hashcash and has been imported into Bitcoin. This principle has
+become the foundation behind the proof-of-work (PoW) algorithms powering
+Bitcoin today, and most cryptocurrencies." (Vikram Dhillon, 2021)</li>
+<li><b>payloads</b> - the list of transactions</li>
+<li>One-Time Password - 
+A One-Time Password (OTP), also known as a one-time PIN or one-time authorization code (OTAC), is a password that is valid for only one login session or transaction, on a computer system or other digital device. Unlike traditional static passwords, OTPs are dynamic and change with each use, providing an additional layer of security.
+
+OTPs avoid several shortcomings associated with traditional password-based authentication. For instance, they are not vulnerable to replay attacks, where an attacker attempts to re-use a password intercepted in transit.
+
+Moreover, if an attacker gains the password for one system, they cannot use it to breach other systems where the user has used the same or similar password.
+
+How are OTPs Generated?
+OTP generation algorithms typically leverage pseudorandomness or randomness to generate a shared key or seed. They also use cryptographic hash functions, which are hard to reverse, making it difficult for an attacker to obtain the data used for the hash.
+
+This is crucial because otherwise, it would be easy to predict future OTPs by observing previous ones.
+
+There are several approaches to generating OTPs:
+
+Time-Synchronization: Here, the OTP is related to a piece of hardware called a security token. The token, which could look like a small calculator or a keychain charm, has an accurate clock synchronized with the clock on the authentication server. The generation of new passwords is based on the current time.
+Hash Chains: In this method, each new OTP is created from the past OTPs used. A one-way function is applied repeatedly to a seed (starting value), and the resulting value is stored on the target system. The user’s first login uses a password derived by applying the function a certain number of times to the seed.
+Challenge-Response: This method requires a user to provide a response to a challenge. For example, the user might input the value that the token has generated into the token itself.
+OTP Delivery Methods
+There are several ways to deliver OTPs to users:
+
+SMS: A common technology used for the delivery of OTPs is text messaging. The OTP is sent to the user’s mobile phone.
+Hardware Tokens: These are physical devices that generate OTPs. Examples include RSA SecurID security tokens and HID Global’s solutions.
+Soft Tokens: On smartphones, OTPs can be delivered directly through mobile apps, including dedicated authentication apps such as Authy and Google Authenticator.
+Hard Copies: In some cases, OTPs are printed on paper that the user is required to carry.
+How To Receive OTP's Abroad
+Enhancing OTP Implementation
+While OTPs are a robust form of authentication, their effectiveness can be undermined by poor implementation. For instance, if the communication channel used to deliver the OTP is not secure, the OTP can be intercepted by attackers. Therefore, it’s crucial to use secure channels, such as HTTPS or TLS, when transmitting OTPs.
+
+OTPs should be used as part of a multi-factor authentication (MFA) strategy. This means that in addition to the OTP, the user should provide another form of authentication, such as a password or biometric data.
+
+This way, even if an attacker manages to intercept the OTP, they would still need the other authentication factor to gain access.
+
+Future Developments in OTP Technology
+As technology evolves, so too does the potential for enhancing OTP systems. One area of interest is biometrics. Biometric data, such as fingerprints or facial recognition, could be used in conjunction with OTPs to provide an even higher level of security.
+
+Another potential development is the use of machine learning and artificial intelligence (AI) in OTP systems. AI could be used to detect unusual or suspicious behavior, such as an OTP request from an unfamiliar location or device, thereby adding an extra layer of security.
+
+Quantum cryptography, which is based on the principles of quantum mechanics, is another promising field. It could potentially be used to generate OTPs that are even more secure and impossible to predict.
+
+Educating Users About OTPs
+Education plays a crucial role in digital security. Users need to understand not only what OTPs are but also how to use them correctly. This includes understanding the importance of not sharing OTPs with others, not responding to phishing attempts that ask for OTPs, and ensuring that the device receiving the OTPs is secure.
+
+Users should be made aware of the potential risks associated with OTPs, such as interception or rerouting.
+
+They should also be educated about the importance of using secure channels when transmitting OTPs and the benefits of using OTPs as part of a multi-factor authentication strategy.
+
+
+Advertisement
+One-Time Passwords (OTPs) are a powerful tool in the arsenal of digital security measures. They offer a dynamic and robust form of authentication that can significantly enhance the security of digitalplatforms.
+
+However, like all security measures, they are not infallible and must be implemented and used correctly to provide effective protection.
+
+As we continue to navigate the digital landscape, the importance of understanding and correctly utilizing such security measures cannot be overstated.  </li>
+
+<li><b>Consensus mechanisms</b> are the complete stack of ideas, protocols ans incentives that enable a distributed set of nodes to agree on the state of a blockchain (Consensus Mechanisms | Ethereum.org, 2023).</li>
   </ul>
 
   <h2>
@@ -171,6 +316,8 @@
       <a name="references"></a>
     </h2>
     <ul class="reflist">
+
+        <li>The Secret Lives of Data. (2023). Thesecretlivesofdata.com. http://thesecretlivesofdata.com/ (The Secret Lives of Data, 2023)</li>
         <li>Cambridge Dictionary. (2023, August 16). blockchain. @CambridgeWords. https://dictionary.cambridge.org/dictionary/english/blockchain (Cambridge Dictionary, 2023a)</li>
 
         <li>blockchain - Quick search results | Oxford English Dictionary. (2023). Oed.com. https://www.oed.com/search/dictionary/?scope=Entries&q=blockchain (Blockchain - Quick Search Results | Oxford English Dictionary, 2023)</li>
@@ -182,12 +329,19 @@
         <li>Bruin, de, Herzog, L., O’Neill, M., & Sandberg, J. (2018). Philosophy of Money and Finance (Stanford Encyclopedia of Philosophy). Stanford.edu. https://plato.stanford.edu/entries/money-finance/ (Bruin et al., 2018)</li>
 
         <li>A Survey of Blockchain Consensus Protocols | ACM Computing Surveys. (2023). ACM Computing Surveys. https://dl.acm.org/doi/full/10.1145/3579845?casa_token=wmxMygdw1y0AAAAA%3Am4OpA-ZnlzleL03WX3k-d_KvhrXv5yEOb8X_RK8Rk_CYuO0kvTCrJW9tTI6_Nzwwnd3GMHA5XRFn (A Survey of Blockchain Consensus Protocols | ACM Computing Surveys, 2023)</li>
+        <li>Xu, J., Wang, C., & Jia, X. (2023). A Survey of Blockchain Consensus Protocols. ACM Computing Surveys. https://doi.org/10.1145/3579845 (Xu et al., 2023)</li>
 
         <li>Haber, S., & Stornetta, W. Scott. (1991). How to time-stamp a digital document. Journal of Cryptology, 3(2). https://doi.org/10.1007/bf00196791 (Haber & Stornetta, 1991)</li>
 
        <li>Vikram Dhillon. (2021). Blockchain Enabled Applications : Understand the Blockchain Ecosystem and How to Make It Work for You. Apress L. P. (Vikram Dhillon, 2021)</li>
 
        <li>phenomenon, n. meanings, etymology and more | Oxford English Dictionary. (2023). Oed.com. https://doi.org/10.1093//OED//8736870835 (“Phenomenon, N. Meanings, Etymology and More | Oxford English Dictionary,” 2023)</li>
+
+       <li>Wikipedia Contributors. (2023, April 7). One-time password. Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/One-time_password (Wikipedia Contributors, 2023)</li>
+
+       <li>Consensus mechanisms | ethereum.org. (2023). Ethereum.org. https://ethereum.org/en/developers/docs/consensus-mechanisms/ (Consensus Mechanisms | Ethereum.org, 2023)</li>
+
+       <li>Becker, K. (2022). Blockchain Matters—Lex Cryptographia and the Displacement of Legal Symbolics and Imaginaries. Law and Critique, 33(2), 113–130. https://doi.org/10.1007/s10978-021-09317-8 (Becker, 2022)</li>
 
     </ul>
     
