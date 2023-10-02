@@ -44,6 +44,7 @@
                 <a href="appresearch.html" class="tocviewlink" data-pltdoc="x">Applied research</a>
               </td>
             </tr>
+            <!--
             <tr>
               <td align="right">
               </td>
@@ -65,6 +66,7 @@
                 <a href="plan.html" class="tocviewlink" data-pltdoc="x">Plan</a>
               </td>
             </tr>
+          -->
             </tbody>
           </table>
         </div>
@@ -121,10 +123,12 @@
       <a name="concepts"></a>
     </h2>
 
-    <p> The concept of blockchain was introduced as concept in computer science by David Chaum in 1982. He basically introduces one specific part of the current description of the blockchain, - online anonymity. The technology that the concept of blockchain encompass was developed in 1970s under the name of <b>distributed database</b>.</p>
+    <p> The concept of blockchain was introduced in computer science by David Chaum in 1982 (dissertation "Computer Systems Established, Maintained, and Trusted by Mutually Suspicious Groups"). He basically introduced only one specific part of the current understanding of the blockchain, - online anonymity. The technology that the concept of blockchain encompass was developed in 1970s under the name of <b>distributed database</b>.</p>
+
+
 
     <p>
-      A timeline from (Sherman et al., 2019):
+      The timeline for the conceptual and practical <i>evolution</i> of the blockchain concept suggested by Sherman et al. (2019):
       <pre>
 1970 James Ellis, public-key cryptography discovered at GCHQ in secret
 1973 Clifford Cocks, RSA cryptosystem discovered at GCHQ in secret
@@ -140,33 +144,24 @@
 2017 Wright and Savanah, nChain European patent application (issued in 2018)
 2018 The European Commission launched the Blockchain Observatory and Forum
 (2022 Ethereum changed to Proof-Of-State)
-</pre>
-GCHQ - Government Communications Headquarters (United Kingdom)
+      </pre>
+      <ul>
+        <li>items in parenthesis are added by the authors of this document</li>
+        <li>GCHQ - Government Communications Headquarters (United Kingdom)</li>
+
+      </ul>
     </p>
-
-
-
-    <p> (Janis) Blockchain is an ambiguous concept. It is called buzzword by some authors (Christophe Schinckus, 2020). The realization of blockchain is dependent on the Internet architecture. Let as assume that the Internet reflects  communication systems of homo sapiens. The communication systems of homo sapiens are highly dynamic but they have some common characteristics. Homo sapiens can do things to achieve particular goals driven by non-deterministic (irrational, random, chaotic) motivations and in their workflow to a goal they have to acquire or distribute different resources. Homo sapiens have developed power relations and management patterns for the administration, ownership, and exchange of both physical (tangible) and abstract (intangible) resources.
-
-    <p>(C-GPT) The concept of blockchain is often described as ambiguous and has been labeled as a buzzword by certain authors, such as Christophe Schinckus in 2020. Understanding the implementation of blockchain technology requires recognizing its intricate connection to the architecture of the Internet.</p>
-
-    <p>(C-GPT) To illustrate this relationship, let's consider the Internet as a reflection of the dynamic communication systems employed by Homo sapiens. Despite their dynamism, these systems share common traits. Within the realm of Homo sapiens' activities, diverse actions are undertaken to achieve specific objectives. These actions are often driven by non-deterministic motivations, characterized as irrational, random, or even chaotic. Along the journey towards these objectives, the acquisition and distribution of various resources play a pivotal role.</p>
-
-    <p>(C-GPT) Throughout the course of human history, Homo sapiens have evolved systems of power relations and management practices to oversee the administration, ownership, and exchange of resources. These resources encompass not only tangible, physical assets but also intangible, abstract ones.</p>
-
-    
-    <p> (Janis) National state based laws and rules are stating different rights for different individuals, groups, and transaction types. Majority of law and rules have been created during the last, at least, 500 years, and are related to the development of printing. In the 21st century, industrial (or should we say information-based?) societies are made themselves dependent on digital information exchange. Many assets of relations, like agreements, consensus, and contracts have also moved to digital media. Internet, WWW, Tor, darknet and blockchain are all assets of digital media.</p>
-
-    <p>(C-GPT) National state-based laws and regulations allocate distinct rights to various individuals, groups, and types of transactions. The majority of these legal frameworks have been established over the past five centuries, closely tied to the evolution of printing technology. However, as we progress into the 21st century, societies, primarily information-based, have grown increasingly reliant on digital information exchange.</p>
-
-    <p>(C-GPT) Numerous facets of human interactions, including agreements, consensus, and contracts, have transitioned into the realm of digital media. Notably, the Internet, World Wide Web (WWW), Tor network, darknet, and blockchain technology represent integral components of this digital landscape.</p>
-
-    <p>Blockchain is a software and network architecture based on the basic architecture of the Internet. The main elements of the blockchain architectures are distributed storage units and communication protocols used by [autonomous] agents to reach a consensus. Models have been developed for valuing goods and services, and new models are constantly being implemented based on laws and regulations for the exchange of values between individuals and between larger groups. This architecture is promoted by the diversified interests of individuals and groups, and even if it is volatile, it already has a relatively large influence on some key processes in the society. An example is the processing of personal and locally stored data. Examples of relevant student projects are an election system, a chat service with strong privacy, a rating system of specific skills, a cryptocurrency system and other systems based on consensus between two or more agents.</p>
-
-    <p>(C-GPT) Blockchain represents a software and network architecture rooted in the foundational structure of the Internet. Key components of blockchain architecture include distributed storage units and communication protocols employed by autonomous agents to achieve consensus. Various models have been devised to assess the value of goods and services, and the landscape continues to evolve in tandem with legal and regulatory frameworks governing value exchange among individuals and larger collectives.</p>
-
-    <p>This architecture derives its momentum from the diverse interests of individuals and groups. Despite its inherent volatility, it wields significant influence over crucial societal processes. One notable example is the handling of personal and locally stored data. Student projects in this domain may encompass the development of systems such as election platforms, privacy-focused chat services, skill-specific rating systems, cryptocurrency networks, and other consensus-driven systems involving two or more agents.</p>
-    
+   
+    <p>This, by no means complete, timeline invite us to assume that we will be talking about very complex artifact. In this short course we will only be able to get some "breadcumbs the baked goods". It is tempting to put the analysis into a broader perspective (or as saying goes <i>look at it with a broader lens</i>). An a broader lens might be philosophical, sociological and, no doubt, also psychological. Mario Bunge introduces a general model for philosophical analysis of human endevours, which consists of 4 basic parts:
+    <ul>
+      <li>Biology</li>
+      <li>Culture</li>
+      <li>Polity (a form or process of civil government or constitution)</li>
+      <li>Economy</li>
+    </ul> 
+    We are going to use this model in a socio-technological approach to understand the pecularities of the idea of blockchain. We will work with social aspects interchangably with technological ones. For the social part you will describe the formation of your mental model related to <i>blockchain</i>. For the techonological part we will work together on some technological "breadcumbs" of the implementation of blockchain into an available infrastructure of information processing units (see <a href="https://uia-worker.github.io/is311/#concepts">description</a> of IPU). Techological artifacts can be viewed as a part of cultural artifacts, i. e. part of the "Culture" part of Bunge's model.
+    </p>
+    <p>Regarding <i>learning theories</i> this course is definitively leaning on <i>social constructivism</i> (Main, 2023). Our objective is to encourage discussions and ideas. You will work independently, in groups or in pairs interchangably. Decision-making (evaluation) will be shared between teachers and students (formative evaluation/feedback). You will study real-world scenarious (like using smart contracts instead of common written contracts in different use cases), some journal articles ( f.ex. Wright & De Filippi, 2015) ) and possibly some excerpts from books (we find some sources collaboratively). It is expected that you particiapate in all 7 workshops.</p>
 
     <h2>
       Learning objectives
@@ -195,19 +190,16 @@ Why such an artifact (an implemented system called blockchain) is necessary? The
 <br />
 <br />
   <cite>Blockchain is a disruptive technology that is revolutionizing information technology and represents a change in the cultural paradigm for how information is shared. Companies are rushing to understand how they can use blockchain technology to innovate processes, products, and transactions.  Blockchain technology is contributing to sustainable development goals (SDGs) from different points of view, such as supporting the realization of a sustainable supply chain, improving energy efficiency, enabling a circular economy, and promoting the creation of secure a and reliable smart cities. </cite>
-  <cite>NFT use-cases will only grow in the future, and developers may eventually be able to tie them to everyday activities like ticket sales, proof of attendance, and fraud detection. Globally, the largest part of NFTs is represented by digital art, sports, and the entertainment industry, but there are countless potential areas of application of NFTs, such as tourism, carbon offsets, energy efficiency, virtual real estate, and consumer & luxury goods. Certain platforms have gone a step further into the virtual reality to showcase the NFTs to the extent of that reality. The emergence of mixed reality offers more collectibles and marketing opportunities which will stimulate more growth.</cite>
-
-  EBCW 2022 • 6.-7. October 2023, Slovenia. (2023, August 30). EU BLOCKCHAIN WEEK 2023. https://www.ebcw.eu/ebcw-2022/ (EBCW 2022 • 6.-7. October 2023, Slovenia, 2023)
-
+  <cite>NFT use-cases will only grow in the future, and developers may eventually be able to tie them to everyday activities like ticket sales, proof of attendance, and fraud detection. Globally, the largest part of NFTs is represented by digital art, sports, and the entertainment industry, but there are countless potential areas of application of NFTs, such as tourism, carbon offsets, energy efficiency, virtual real estate, and consumer & luxury goods. Certain platforms have gone a step further into the virtual reality to showcase the NFTs to the extent of that reality. The emergence of mixed reality offers more collectibles and marketing opportunities which will stimulate more growth.</cite> (EBCW 2022 • 6.-7. October 2023, Slovenia, 2023)
     </td>
   </tr>
   <tr>
     <td>Understand how a specific semester project is related to the similar systems and (if applicable) to society in general</td>
-  <td>"in the same domain" relates to domain of blockchain. </td>
+  <td>"in the same domain" relates to domain of blockchain and subdomains like <i>lex cryptographica</i> (expansion of a new subset of law, i.e. rules administered through self-executing smart contracts and decentralized (autonomous) organizations), Ethereum and blockchain economics.</td>
   </tr>
   <tr>
-    <td>Be able to analyse a problem and, if possible, suggest a solution that uses relevant theories, methods and models in the areas like multi-agent systems and the Internet of Things.</td>
-    <td>"a problem" in this context is the problem suggested by students that they want to solve based on their knowledge and skills related to the phenomenon of blockchain. From the engineering perspective the familiarity with the methods from the systems development (IS-104, IS-114, IS-20x) and understanding of networks in general (IS-105) are relevant for the blockchain related projects. In addition, methods for the applied science should be known for the students. Read an <a href="appresearch.html" target="_blank">additional document</a> for an introduction to a possible methodology for the development of the artifacts.</td>
+    <td>Be able to analyse a problem and, if possible, suggest a solution that uses relevant theories, methods and models in the areas cryptography, consensus protocols, smart contracts and <i>lex cryptographica</i>.</td>
+    <td>"a problem" in this context is the problem suggested by students that they want to solve based on their knowledge and skills related to the phenomenon of blockchain. From the engineering perspective the familiarity with the methods from the systems development (IS-104, IS-114, IS-20x) and understanding of networks in general (IS-105) are relevant for the blockchain related projects. In addition, methods for the applied science should be known for the students. Read an <a href="appresearch.html" target="_blank">additional document</a> for an introduction to a possible methodology for the development of the artifacts. It will be an opportunity to refresh knowledge about git, Go and systems development in general.</td>
   </tr>
   <tr>
     <td>Be able to analyse a problem and, if possible, suggest a solution that uses relevant theories and methods related to blockchain</td>
@@ -219,19 +211,19 @@ Why such an artifact (an implemented system called blockchain) is necessary? The
   </tr>
   <tr>
     <td>Be able to design and implement a system based on a blockchain (or parts of it), by applying relevant theories, methods and models based on blockchain.</td>
-    <td>&nbsp;</td>
+    <td>This objective is ambitious for such a tiny course, so some reflections around the implementation challenges is satisfactory.</td>
   </tr>
   <tr>
     <td>Be able to evaluate a blockchain (or parts of it) with regard to the evaluation criteria.</td>
-    <td>&nbsp;</td>
+    <td>During the workshops an evaluation criteria will be developed.</td>
   </tr>
   <tr>
     <td>Be able to select and reflect on relevant aspects and use these in a new context.</td>
-    <td>&nbsp;</td>
+    <td>Using knowledge about the concepts of blockchain and exprience with some (even limited) practical scenarious, think about som new applications or theories. </td>
   </tr>
   <tr>
     <td>Be able to communicate both the knowledge and the skills, related to the implementation of the blockchain, both orally and in a written report by using topic-related terminology.</td>
-    <td>&nbsp;</td>
+    <td>This is the core of the formative (and partly normative since we have to give a grade) evaluation in this course. The oral exam will not be purely normative evaluation. You will get some feedback during the exam. Success depends on regular participation in workshops (will be 7 all together).</td>
   </tr>
 </tbody>
   
@@ -247,7 +239,7 @@ Why such an artifact (an implemented system called blockchain) is necessary? The
         <li>7 x 3 hours - acitivities with supervision</li>
         <li>~80 hours - self-organized project work (groups should plan for this carefully)</li>
       </ul>
-    The course is based on meetings for creative thinking and problem solving. The students generate groups of 3-6 students by themselves, work on finding a relevant project (specifies the problem to be solved) and work on prototypes. Any other week the groups present their project status in a forum (4 presentations). At the end of the course an oral exam is arranged to evaluate the students' work. </p>
+    The course is based on meetings for creative thinking and problem solving.</p>
 
 
     
@@ -265,42 +257,42 @@ Why such an artifact (an implemented system called blockchain) is necessary? The
     <tbody>
     <tr>
       <td>Wed, Oct 11</td>
-      <td>What is there anything called Blockchain?</td>
-      <td>Discussion and groups.</td>
+      <td>Is Blockchain a hype? And is it already behind the Peak? What are social and technological parts of the Blockchain?</td>
+      <td>Discussion and groups. Produce diaries and layout of an opinion essay. First "hands-on" steps with technology.</td>
     </tr>
     <tr>
       <td>Wed, Oct 18</td>
-      <td>Peer-to-peer networks and public-key cryptography as physcial and social technologies</td>
-      <td>Discussion of reading in groups.</td>
+      <td>Are peer-to-peer networks and public-key cryptography technological (and physical) and social (and cultural) artifacts?</td>
+      <td>Discussion and reading in groups. Further encounter with technology. A new version of opinion essay.</td>
     </tr>
     <tr>
       <td>Wed, Oct 25</td>
-      <td>Consensus, - one of the basic problems in all human societies?</td>
-      <td>Discussion of reading in groups</td>
+      <td>Consensus, - one of the basic problems in all human societies? Can it be "digitalized"?</td>
+      <td>Discussion and reading in groups. Further encounter with technology (making a smart contract on your machine). Further work on the opinion essay.</td>
     </tr>
     <tr>
       <td>Wed, Nov 1</td>
       <td>Practical implementations of blockchain, - disconnected from the human societies?</td>
-      <td>Opinion essay about the 3 first seminars.</td>
+      <td>Presentation and discussion about the opinion essay covering the 3 first seminars.</td>
     </tr>
     <tr>
       <td>Wed, Nov 8</td>
-      <td>Micro-project plan </td>
-      <td>Definition of a micro-project (see <a href="appresearch.html" target="_blank"> for some guidelines in item 7)</a></td>
+      <td>Micro-project plan</td>
+      <td>Definition of a micro-project (see <a href="appresearch.html" target="_blank"> for some guidelines in item 7). Discussion. Produce a project description (and think about evaluation criteria).</a></td>
     </tr>
     </tr>
     <tr>
       <td>Wed, Nov 15</td>
       <td>Work on micro-project I</td>
-      <td>Discussion and Presentations.</td>
+      <td>Discussions and Presentations.</td>
     </tr>
     <tr>
       <td>Wed, Nov 22</td>
       <td>Work on micro-project II</td>
-      <td>Trial exam.</td>
+      <td>Trial exam and discussions.</td>
     </tr>
     <tr>
-      <td>TBA</td>
+      <td>Mon, Nov 27 & Tue, Nov 28</td>
       <td>Project presentation.</td>
       <td>Oral Exam</td>
     </tr>
@@ -312,35 +304,43 @@ Why such an artifact (an implemented system called blockchain) is necessary? The
       <a name="references"></a>
     </h2>
     <ul class="reflist">
-        <li>Cambridge Dictionary. (2023, August 16). blockchain. @CambridgeWords. https://dictionary.cambridge.org/dictionary/english/blockchain (Cambridge Dictionary, 2023a)</li>
-
         <li>blockchain - Quick search results | Oxford English Dictionary. (2023). Oed.com. https://www.oed.com/search/dictionary/?scope=Entries&q=blockchain (Blockchain - Quick Search Results | Oxford English Dictionary, 2023)</li>
 
-        <li>Science of Blockchain Conference 2022. (2022). Stanford.edu. https://cbr.stanford.edu/sbc22/ (Science of Blockchain Conference 2022, 2022)</li>
-
-        <li>Lamport, L. (1983). The Weak Byzantine Generals Problem. Journal of the ACM, 30(3), 668–676. https://doi.org/10.1145/2402.322398 (Lamport, 1983)</li>
-
-        <li>Vikram Dhillon. (2021). Blockchain Enabled Applications : Understand the Blockchain Ecosystem and How to Make It Work for You. Apress L. P. (Vikram Dhillon, 2021)</li>
+        <li>Cambridge Dictionary. (2023, August 16). blockchain. @CambridgeWords. https://dictionary.cambridge.org/dictionary/english/blockchain (Cambridge Dictionary, 2023a)</li>
 
         <li>Christophe Schinckus. (2020). The good, the bad and the ugly: An overview of the sustainability of blockchain technology. Energy Research and Social Science, 69, 101614–101614. https://doi.org/10.1016/j.erss.2020.101614 (Christophe Schinckus, 2020)</li>
 
-        <li>The World’s Oldest Blockchain Has Been Hiding in the New York Times Since 1995. (2018, August 27). Vice.com. https://www.vice.com/en/article/j5nzx4/what-was-the-first-blockchain (The World’s Oldest Blockchain Has Been Hiding in the New York Times since 1995, 2018)</li>
-
-        <li>Lamport, L. (1983). The Weak Byzantine Generals Problem. Journal of the ACM, 30(3), 668–676. https://doi.org/10.1145/2402.322398 (Lamport, 1983)</li>
-
-        <li>Systemspedia. (2019). Bcsss.org. http://systemspedia.bcsss.org/?title=ARTIPHYSIS (Systemspedia, 2019)</li>
-
-        <li>Sherman, A. T., Javani, F., Zhang, H., & Golaszewski, E. (2019). On the Origins and Variations of Blockchain Technologies. IEEE Security & Privacy, 17(1), 72–77. https://doi.org/10.1109/msec.2019.2893730 (Sherman et al., 2019)</li>
+        <li>EBCW 2022 • 6.-7. October 2023, Slovenia. (2023, August 30). EU BLOCKCHAIN WEEK 2023. https://www.ebcw.eu/ebcw-2022/</li>
 
         <li>Haber, S., & Stornetta, W. Scott. (1991). How to time-stamp a digital document. Journal of Cryptology, 3(2). https://doi.org/10.1007/bf00196791 (Haber & Stornetta, 1991)</li>
 
+        <li>Heo, H., Woo, S., Yoon, T., Kang, M. S., & Shin, S. (2023). Partitioning Ethereum without Eclipsing It. Proceedings 2023 Network and Distributed System Security Symposium. https://doi.org/10.14722/ndss.2023.24465 (Heo et al., 2023)</li>
+
         <li>Kim, L. (2023, September 5). The Mysterious Power of the Platform, the Internet’s Building Block. WIRED; WIRED. https://www.wired.com/story/lexicon-platform-linguistics-philosophy/ (Kim, 2023)</li>
+
+        <li>Lamport, L. (1983). The Weak Byzantine Generals Problem. Journal of the ACM, 30(3), 668–676. https://doi.org/10.1145/2402.322398 (Lamport, 1983)</li>
+
+        <li>Lex Cryptographia: Guidelines for ensuring due process in transnational blockchain-based arbitration [1]. (2022). Ibanet.org. https://www.ibanet.org/lex-cryptographia-due-process-blockchain-based-arbitration (Lex Cryptographia: Guidelines for Ensuring Due Process in Transnational Blockchain-Based Arbitration [1], 2022)</li>
+
+        <li>Main, P. (2023, January 29). Embracing The Learning Theory: Constructivism. Structural-Learning.com; Structural Learning. https://www.structural-learning.com/post/embracing-the-learning-theory-constructivism (Main, 2023)</li>
+
+        <li>Peters, G. W., & Efstathios Panayi. (2015). Understanding Modern Banking Ledgers Through Blockchain Technologies: Future of Transaction Processing and Smart Contracts on the Internet of Money. Social Science Research Network. https://doi.org/10.2139/ssrn.2692487 (Peters & Efstathios Panayi, 2015)</li>
 
         <li>Primavera. (2018). Blockchain and the Law. Harvard University Press. (Primavera, 2018)</li>
 
-        <li>Heo, H., Woo, S., Yoon, T., Kang, M. S., & Shin, S. (2023). Partitioning Ethereum without Eclipsing It. Proceedings 2023 Network and Distributed System Security Symposium. https://doi.org/10.14722/ndss.2023.24465 (Heo et al., 2023)</li>
+        <li>Science of Blockchain Conference 2022. (2022). Stanford.edu. https://cbr.stanford.edu/sbc22/ (Science of Blockchain Conference 2022, 2022)</li>
 
-        <li>Peters, G. W., & Efstathios Panayi. (2015). Understanding Modern Banking Ledgers Through Blockchain Technologies: Future of Transaction Processing and Smart Contracts on the Internet of Money. Social Science Research Network. https://doi.org/10.2139/ssrn.2692487 (Peters & Efstathios Panayi, 2015)</li>
+        <li>Sherman, A. T., Javani, F., Zhang, H., & Golaszewski, E. (2019). On the Origins and Variations of Blockchain Technologies. IEEE Security & Privacy, 17(1), 72–77. https://doi.org/10.1109/msec.2019.2893730 (Sherman et al., 2019)</li>
+
+        <li>Systemspedia. (2019). Bcsss.org. http://systemspedia.bcsss.org/?title=ARTIPHYSIS (Systemspedia, 2019)</li>
+
+        <li>The World’s Oldest Blockchain Has Been Hiding in the New York Times Since 1995. (2018, August 27). Vice.com. https://www.vice.com/en/article/j5nzx4/what-was-the-first-blockchain (The World’s Oldest Blockchain Has Been Hiding in the New York Times since 1995, 2018)</li>
+
+        <li>View of Formalizing and Securing Relationships on Public Networks | First Monday. (2023). Firstmonday.org. https://firstmonday.org/ojs/index.php/fm/article/view/548/469 (View of Formalizing and Securing Relationships on Public Networks | First Monday, 2023)</li>
+
+        <li>Vikram Dhillon. (2021). Blockchain Enabled Applications : Understand the Blockchain Ecosystem and How to Make It Work for You. Apress L. P. (Vikram Dhillon, 2021)</li>
+
+        <li>Wright, A., & De Filippi, P. (2015). Decentralized Blockchain Technology and the Rise of Lex Cryptographia. SSRN Electronic Journal. https://doi.org/10.2139/ssrn.2580664 (Wright & De Filippi, 2015)</li>
 
 
     </ul>
