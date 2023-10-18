@@ -191,10 +191,26 @@ blockquote {
   color: black;
 }
 
-.incercisebody {
+.incercisebody, .codexampbody {
     margin-left: 0px;
     margin-right: 10px;
 }
+
+/* section with programming code */
+.codeexamp {
+  padding: 0px 0px 0px 0px;
+  border-left-style: solid;
+  border-width: 5px;
+  border-color: green;
+  background-color: #FFFBF7;
+}
+
+.codeexampheader {
+  color: antiquewhite;
+  background-color: #6d8486;
+  padding: 5px 0px 5px 10px;
+  margin-left: 0px;
+  margi
 
 /*
 a {
