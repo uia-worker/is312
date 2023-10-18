@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="no-NB">
+<head>
+    <meta charset="utf-8">
+    <title>IS-312 One-Time Password</title>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styles/is312-style.css" title="default">
+    <script type="text/javascript" src="js/is312.js"></script>
+</head>
+<body>
+  <div class="tocset">
+    <div class="tocview">
+      <div class="tocviewlist tocviewlisttopspace">
+        <div class="tocviewtitle">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td style="width: 1em;">
+              <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">▼</a>
+                </td>
+                <td>
+                </td>
+                <td>
+                  <a href="index.html" class="tocviewlink" data-pltdoc="x">Fall 2023: IS-312</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tocviewsublisttop" style="display: block;" id="tocview_0">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="index.html" class="tocviewlink" data-pltdoc="x">Course description</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="appresearch.html" class="tocviewlink" data-pltdoc="x">Applied research</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="bitsandpieces.html" class="tocviewlink" data-pltdoc="x">"Bits and pieces"</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="credits.html" class="tocviewlink" data-pltdoc="x">Credits</a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+    <div class="tocsub">
+      <div class="tocsubtitle">On this page:</div>
+      <table class="tocsublist" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+              <span class="tocsublinknumber"><tt>&nbsp;</tt></span>
+              <a href="#onetimepassword" class="tocsubseclink" data-pltdoc="x">One-Time Password</a>
+            </td> 
+          </tr>
+          
+          
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  <div class="maincolumn">
+
+    <h2> 
+One-Time Password 
+      <a name="onetimepassword"></a>
+    </h2>
+
+<p>This is based on Wikipedia Contributors (2023).</li></p>
+   
+<p>A One-Time Password (OTP), also known as a one-time PIN or one-time authorization code (OTAC), is a password that is valid for only one login session or transaction, on a computer system or other digital device. Unlike traditional static passwords, OTPs are dynamic and change with each use, providing an additional layer of security.</p>
+
+<p>OTPs avoid several shortcomings associated with traditional password-based authentication. For instance, they are not vulnerable to replay attacks, where an attacker attempts to re-use a password intercepted in transit.</p>
+
+<p>Moreover, if an attacker gains the password for one system, they cannot use it to breach other systems where the user has used the same or similar password.</p>
+
+<h3>How are OTPs Generated?</h3>
+
+<p>OTP generation algorithms typically leverage pseudorandomness or randomness to generate a shared key or seed. They also use cryptographic hash functions, which are hard to reverse, making it difficult for an attacker to obtain the data used for the hash.</p>
+
+<p>This is crucial because otherwise, it would be easy to predict future OTPs by observing previous ones.</p>
+
+<p>There are several approaches to generating OTPs:</p>
+<ul>
+<li>Time-Synchronization: Here, the OTP is related to a piece of hardware called a security token. The token, which could look like a small calculator or a keychain charm, has an accurate clock synchronized with the clock on the authentication server. The generation of new passwords is based on the current time.</li>
+<li>Hash Chains: In this method, each new OTP is created from the past OTPs used. A one-way function is applied repeatedly to a seed (starting value), and the resulting value is stored on the target system. The user’s first login uses a password derived by applying the function a certain number of times to the seed.</li>
+<li>Challenge-Response: This method requires a user to provide a response to a challenge. For example, the user might input the value that the token has generated into the token itself.</li>
+</ul>
+
+<h3>OTP Delivery Methods</h3>
+<p>There are several ways to deliver OTPs to users:</p>
+<ul>
+SMS: A common technology used for the delivery of OTPs is text messaging. The OTP is sent to the user’s mobile phone.
+Hardware Tokens: These are physical devices that generate OTPs. Examples include RSA SecurID security tokens and HID Global’s solutions.
+Soft Tokens: On smartphones, OTPs can be delivered directly through mobile apps, including dedicated authentication apps such as Authy and Google Authenticator.
+Hard Copies: In some cases, OTPs are printed on paper that the user is required to carry.
+</ul>
+<h3>How To Receive OTP's Abroad: Enhancing OTP Implementation</h3>
+
+<p>While OTPs are a robust form of authentication, their effectiveness can be undermined by poor implementation. For instance, if the communication channel used to deliver the OTP is not secure, the OTP can be intercepted by attackers. Therefore, it’s crucial to use secure channels, such as HTTPS or TLS, when transmitting OTPs.</p>
+
+<p>OTPs should be used as part of a multi-factor authentication (MFA) strategy. This means that in addition to the OTP, the user should provide another form of authentication, such as a password or biometric data.</p>
+
+<p>This way, even if an attacker manages to intercept the OTP, they would still need the other authentication factor to gain access.</p>
+
+<h3>Future Developments in OTP Technology</h3>
+<p>As technology evolves, so too does the potential for enhancing OTP systems. One area of interest is biometrics. Biometric data, such as fingerprints or facial recognition, could be used in conjunction with OTPs to provide an even higher level of security.</p>
+
+<p>Another potential development is the use of machine learning and artificial intelligence (AI) in OTP systems. AI could be used to detect unusual or suspicious behavior, such as an OTP request from an unfamiliar location or device, thereby adding an extra layer of security.</p>
+
+<p>Quantum cryptography, which is based on the principles of quantum mechanics, is another promising field. It could potentially be used to generate OTPs that are even more secure and impossible to predict.</p>
+
+<h3>Educating Users About OTPs</h3>
+<p>Education plays a crucial role in digital security. Users need to understand not only what OTPs are but also how to use them correctly. This includes understanding the importance of not sharing OTPs with others, not responding to phishing attempts that ask for OTPs, and ensuring that the device receiving the OTPs is secure.</p>
+
+<p>Users should be made aware of the potential risks associated with OTPs, such as interception or rerouting.</p>
+
+<p>They should also be educated about the importance of using secure channels when transmitting OTPs and the benefits of using OTPs as part of a multi-factor authentication strategy.</p>
+
+
+<h3>Advertisement</h3>
+<p>One-Time Passwords (OTPs) are a powerful tool in the arsenal of digital security measures. They offer a dynamic and robust form of authentication that can significantly enhance the security of digitalplatforms.</p>
+
+<p>However, like all security measures, they are not infallible and must be implemented and used correctly to provide effective protection.</p>
+
+<p>As we continue to navigate the digital landscape, the importance of understanding and correctly utilizing such security measures cannot be overstated.</p> 
+
+
+  <h2>
+      References
+      <a name="references"></a>
+    </h2>
+    <ul class="reflist">
+
+
+       <li>Wikipedia Contributors. (2023, April 7). One-time password. Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/One-time_password (Wikipedia Contributors, 2023)</li>
+
+
+       <li>Becker, K. (2022). Blockchain Matters—Lex Cryptographia and the Displacement of Legal Symbolics and Imaginaries. Law and Critique, 33(2), 113–130. https://doi.org/10.1007/s10978-021-09317-8 (Becker, 2022)</li>
+
+    </ul>
+    
+
+  </div>
+</body>
+</html>
